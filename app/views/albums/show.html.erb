@@ -1,6 +1,7 @@
 <h1>Special Page for <%= @album.title %></h1>
 
-All the tracks will go here + there will be a link to all the tracks.
+<p>All the tracks will go here + there will be a link to all the tracks.</p>
+<br>
 
 <%= link_to "Edit Album", edit_album_url(@album) %>
 <%= button_to "Delete Album", album_url(@album), method: :delete %>
