@@ -12,4 +12,18 @@
 #
 
 class Track < ActiveRecord::Base
+  STATUS = %w(bonus regular)
+
+  validates :album, presence: true
+  validates :title, :status, presence: true
+  validates :status, inclusion: STATUS
+
+  belongs_to(
+    :album,
+    class_name: :Album,
+    foreign_key: :album_id,
+    primary_key: :id
+  )
+
+  has_one :band, through: :album, source: :band
 end
