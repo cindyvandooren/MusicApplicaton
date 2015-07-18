@@ -2,4 +2,6 @@
 
 <p>More information will be posted here later</p>
 
+<%= link_to "Edit Band", edit_band_url(@band) %>
+<%= button_to "Delete Band", band_url(@band), method: :delete %>
 <%= link_to "Bands Index", bands_url %>
