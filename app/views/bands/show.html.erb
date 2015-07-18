@@ -1,7 +1,12 @@
 <h1>Special Page for <%= @band.name %></h1>
 
-<p>More information will be posted here later</p>
+<ul>
+<% @band.albums.each do |album| %>
+  <li><%= link_to album.title, album_url(album) %></li>
+<% end %>
+</ul>
 
 <%= link_to "Edit Band", edit_band_url(@band) %>
 <%= button_to "Delete Band", band_url(@band), method: :delete %>
 <%= link_to "Bands Index", bands_url %>
+<%= link_to "Create Album", new_band_album_url(@band) %>
