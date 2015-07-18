@@ -1,0 +1,6 @@
+<% if flash[:errors] %>
+<ul>
+  <% flash[:errors].each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+<% end %>
