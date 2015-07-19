@@ -8,6 +8,7 @@ class AlbumsController < ApplicationController
 
   def new
     @album = Album.new
+    @band = @album.band
     render :new
   end
 

@@ -29,6 +29,8 @@ gem 'bcrypt'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'bootstrap-sass'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
