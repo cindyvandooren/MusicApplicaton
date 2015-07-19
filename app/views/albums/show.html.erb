@@ -5,4 +5,5 @@
 
 <%= link_to "Edit Album", edit_album_url(@album) %>
 <%= button_to "Delete Album", album_url(@album), method: :delete %>
+<%= link_to "Add New Album", new_band_album_url(@album.band) %>
 <%= link_to "Band", band_url(@album.band_id) %>
